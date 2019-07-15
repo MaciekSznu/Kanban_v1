@@ -1,9 +1,16 @@
-body {margin: 0;}
-* {box-sizing: border-box;}
+body {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 .ui-sortable {
   min-height: 80px;
 }
+
 .btn-delete {
   position: absolute;
   right: 0;
@@ -11,23 +18,32 @@ body {margin: 0;}
   width: 22px;
   height: 22px;
   border: 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
+
 /* BOARD */
 .board h1 {
   margin-left: 8px;
 }
-.column-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 
+.column-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 
 /* COLUMN */
 .column {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   min-width: 300px;
   min-height: 50vh;
   background-color: lightgrey;
@@ -35,6 +51,7 @@ body {margin: 0;}
   list-style: none;
   position: relative;
 }
+
 .column-add-card {
   cursor: pointer;
   text-decoration: underline;
@@ -44,7 +61,8 @@ body {margin: 0;}
 
 /* STYLE KARTY */
 .card {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   height: 60px;
   margin-bottom: 5px;
@@ -52,19 +70,24 @@ body {margin: 0;}
   overflow: hidden;
   position: relative;
 }
+
 .card-list {
   list-style: none;
   margin: 5px;
   padding: 0px;
 }
+
 .card-description {
   margin: 2px 0;
 }
+
 .card-placeholder {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   height: 60px;
   margin-bottom: 5px;
   border: 2px solid lightgrey;
   background-color: lightblue;
 }
+/*# sourceMappingURL=style.css.map */
