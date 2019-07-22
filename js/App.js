@@ -1,3 +1,5 @@
+'use strict';
+
 // OGÓLNA FUNKCJA
 //nie jest potrzebna gdy korzytsamy z api - informację o id otrzymujemy z serwera i nie musimy go tworzyć losowo
 // function randomString() {
@@ -21,6 +23,8 @@ function generateTemplate(name, data, basicElement) {
 
 //FUNKCJONALNOŚCI DLA API
 //zmienne do komunikacji z serwerem - url oraz nagłówki
+
+var prefix = 'https://cors-anywhere.herokuapp.com/';
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
   'X-Client-Id': '4028',
@@ -28,7 +32,7 @@ var myHeaders = {
 };
 
 //zapytanie wysyłane do serwera
-fetch(baseUrl + '/board', { headers: myHeaders })
+fetch(prefix + baseUrl + '/board', { headers: myHeaders })
   .then(function(resp) {
     return resp.json();
   })

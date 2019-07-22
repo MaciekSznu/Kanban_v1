@@ -18,7 +18,7 @@ function Column(id, name) {
         data.append('name', cardName);
         data.append('bootcamp_kanban_column_id', self.id);
 
-        fetch(baseUrl + '/card', {
+        fetch(prefix + baseUrl + '/card', {
             method: 'POST',
             headers: myHeaders,
             body: data,
@@ -27,7 +27,7 @@ function Column(id, name) {
             return res.json();
             })
         .then(function(resp) {
-            var card = new Card(resp.id, cardName);
+            var card = new Card(resp.id, cardName, self.id);
             self.addCard(card);
             });
         }
@@ -40,7 +40,7 @@ Column.prototype = {
   },
   removeColumn: function() {
     var self = this;
-    fetch(baseUrl + '/column/' + self.id, { method: 'DELETE', headers: myHeaders })
+    fetch(prefix + baseUrl + '/column/' + self.id, { method: 'DELETE', headers: myHeaders })
         .then(function(resp) {
             return resp.json();
         })
