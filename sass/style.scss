@@ -1,4 +1,7 @@
-body {margin: 0;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 * {box-sizing: border-box;}
 
 .ui-sortable {
@@ -19,13 +22,15 @@ ul {
 }
 /* BOARD */
 .board h1 {
-  margin-left: 8px;
+  text-align: center;
 }
 .column-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-around;
 }
+
 
 
 /* COLUMN */
@@ -43,6 +48,9 @@ ul {
   text-decoration: underline;
   margin: 5px 8px;
   display: block;
+}
+.column-card-list {
+  list-style: none;
 }
 
 /* STYLE KARTY */

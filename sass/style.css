@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -28,7 +29,11 @@ ul {
 
 /* BOARD */
 .board h1 {
-  margin-left: 8px;
+  text-align: center;
+}
+
+button.create-column {
+  margin: 0 auto;
 }
 
 .column-container {
@@ -41,6 +46,8 @@ ul {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /* COLUMN */
@@ -61,6 +68,10 @@ ul {
   text-decoration: underline;
   margin: 5px 8px;
   display: block;
+}
+
+.column-card-list {
+  list-style: none;
 }
 
 /* STYLE KARTY */
